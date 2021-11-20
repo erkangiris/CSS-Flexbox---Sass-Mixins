@@ -1,0 +1,58 @@
+@mixin flex($direction:row, $vertical:flex-start, $horizontal:flex-start, $wrap:nowrap){
+    display:flex;
+    @if($direction==row){
+        flex-direction: row;
+        @if($vertical==center){
+            align-items:center;
+        }@else if($vertical==start){
+            align-items: flex-start;
+        }@else if($vertical==end){
+            align-items: flex-end;  
+        }
+        @if($horizontal==center){
+            justify-content: center;
+        }@else if($horizontal==start){
+            justify-content: flex-start;
+        }@else if($horizontal==end){
+            justify-content: flex-end;
+        }@else if($horizontal==between){
+            justify-content: space-between;
+        }
+        @if($wrap==wrap){
+            flex-wrap:wrap;
+        }
+    }@else if($direction==column){
+        flex-direction: column;
+        @if($vertical==center){
+            align-items: center;
+        }@else if($vertical==start){
+            align-items: flex-start;
+        }@else if($vertical==end){
+            align-items: flex-end;
+        }   
+        @if($horizontal==center){
+            justify-content:center;
+        }@else if($horizontal==start){
+            justify-content: flex-start;
+        }@else if($horizontal==end){
+            justify-content: flex-end;  
+        }@else if($horizontal==between){
+            justify-content: space-between;  
+        }@else{
+            justify-content:center;
+        }
+    }
+}
+
+
+.div{
+    width:400px;
+    height:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    background:lime;
+    @include flex(column,center,start)
+}
