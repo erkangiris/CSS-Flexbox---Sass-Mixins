@@ -9,7 +9,7 @@ Excellent CSS-Flexbox - Sass-Mixins
 }
 </pre>
 
-1: Direction. Column or Row. Default = nowrap<br>
+1: Direction. Column or Row. Default = row<br>
 2: Vertical Align. Default = flex-start<br>
 3: Horizontal align. Default = flex-start<br>
 4: Wrap. Default = nowrap. No required <br>
